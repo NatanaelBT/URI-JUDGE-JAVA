@@ -1,0 +1,38 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package curso;
+
+import java.util.Random;
+import java.util.Scanner;
+
+/**
+ *
+ * @author fax_c
+ */
+public class sala {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        double[] arrayDeInteiros = new double[102];
+        int i = 0;
+
+        System.out.println("Digite um valor:");
+        double number = input.nextInt();
+        int k = 0;
+        arrayDeInteiros[k] = number;
+        for (int j = 0; j < 100; j++, k++) {
+
+            arrayDeInteiros[k + 1] = number / 2;
+            number = arrayDeInteiros[k + 1];
+
+            System.out.print("N[" + j + "] = ");
+            System.out.printf("%.4f\n", arrayDeInteiros[k]);
+
+        }
+
+    }
+
+}
